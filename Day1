@@ -1,0 +1,196 @@
+public class day1_bootcamp {
+    // simple intrest//
+    public static void getintrest(Integer p,Integer t,Integer r)
+    {
+        
+    Decimal si=(p*t*r)/100;
+    System.Debug(si);
+    }
+    public static void getfarenheit(Integer c)
+    {
+        Decimal f=((c+32)*5/9);
+        system.debug(f);
+    }
+    //day of week//
+    public static void getday(Integer s)
+    {
+        switch on s
+        {
+            when 1
+            {
+                System.debug('Sunday');
+            }
+            when 2
+            {
+                system.debug('monday');
+            }
+            when 3
+            {
+                System.debug('tuesday');
+            }
+        }
+    }
+    //tables//
+    public static void gettable(Integer d)
+    {
+        for( Integer i=1;i<=10;i++)
+        {
+            Integer s=d*i;
+            string st= d +'x'+i+'='+s;
+            system.debug(st);
+        }
+    }
+    //expresson//
+    public  static void getvalue(Integer x,Integer n)
+    {
+        Double s=0;
+        for(Integer i=0;i<=n;i++)
+            
+        {
+             s+=Math.pow(x,i);
+        }
+        System.debug(s);
+        
+    }
+    //fibonacci//
+    public static void getfibonnaci(Integer q)
+    {
+        List<Integer> fibonacciseries = new List<Integer>();
+        Integer a=0;
+        Integer b=1;
+        Integer i;
+        Integer Temp;
+        if(q<=1)
+        {
+            System.debug(a);
+        }
+        if(q==2)
+        {
+           fibonacciseries.add(a);
+           fibonacciseries.add(b);
+               
+        }
+        if(q>2){
+            fibonacciseries.add(a);
+            fibonacciseries.add(b);
+            
+            for(i=3;i<=q;i++)
+            {
+                Temp=a+b;
+                if(Temp<q)
+                {
+                    fibonacciseries.add(Temp);
+                    a=b;
+                    b=Temp;
+                }    
+            }
+        }
+        system.debug(fibonacciseries);
+        
+    }
+    //recordid//
+    public static void gettype()
+    {
+        string recordid='00101019';
+        switch on recordid.left(3)
+        {
+            when '001'{
+                System.debug('wow');
+            }
+            when '002'{
+                system.debug('oww');
+            }
+            when '222'{
+                system.debug('090');
+            }
+        }
+    }
+    //spynumber
+    public static void getspy(Integer r)
+    {
+        Integer c=1;
+        Integer v=0;
+        while(r!=0)
+        {
+            c*=Math.mod(r,10);
+            v+=Math.mod(r,10);
+            r=(Integer)r/10;
+        }
+        if(c==v)
+        {
+            system.debug('spy number');
+        }
+        else
+        {
+            system.debug('not spy');
+        }
+    }
+    //pell series
+    public static void getpell(Integer g)
+    {
+         List<Integer> pellseries = new List<Integer>();
+        Integer a=0;
+        Integer b=1;
+        Integer temp;
+        if(g<=1)
+        {
+            pellseries.add(a);
+        }
+        if(g==2)
+        {
+            pellseries.add(a);
+            pellseries.add(b);
+        }
+        if(g>2)
+        {
+            pellseries.add(a);
+            pellseries.add(b);
+            for(Integer i=3;i<=g;i++)
+            {
+                temp=a+(b*2);
+                pellseries.add(temp);
+                a=b;
+                b=temp;
+            }
+        }
+        system.debug(pellseries);
+        
+    }
+    public static void getacc()
+    {
+        Account[] accRecd=new Account[3];
+
+    Account a1=new Account();
+     a1.name='Raja';
+     a1.industry='Banking';
+     a1.phone='7731981144';
+    
+    
+     Account a2=new Account();
+     a2.name='Siva';
+     a2.industry='Education';
+     a2.phone='9988998899';
+     
+     Account a3=new Account();
+     a3.name='Balu';
+     a3.industry='Finance';
+     a3.phone='8877665544';
+     
+     //storing account records into account array.
+      accRecd[0]=a1;
+      accRecd[1]=a2;
+      accRecd[2]=a3;
+    
+      //printing account type of array by using enhanced for loop
+      for(Account acc:accRecd)
+      {
+          System.debug('-------------------Start----------------------');
+          System.debug('Name = '+acc.name);
+          system.debug('Industry = '+acc.industry);
+          system.debug('Phone = '+acc.phone);
+          system.debug('-------------------End------------------------');
+      } 
+
+    }
+    
+
